@@ -5,6 +5,8 @@ go:
   - 1.11
   - tip
 
+sudo: required
+
 services:
   - mysql
 
