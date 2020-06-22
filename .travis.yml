@@ -7,17 +7,6 @@ go:
 
 sudo: required
 
-services:
-  - mysql
-
-before_install:
-  - echo -e "[server]\username='root'\password=''" | sudo tee -a /etc/mysql/my.cnf
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS rest_api_example;'
-
 install:
   - go get golang.org/x/tools/cmd/cover
   - go get github.com/gorilla/mux
-  - go get github.com/go-sql-driver/mysql
-
-script:
-  - go test -covermode=count -coverprofile=coverage.out
