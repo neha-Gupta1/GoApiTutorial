@@ -19,6 +19,7 @@ type App struct {
 	DB     *sql.DB
 }
 
+// Adding a comment to Initalize function
 func (a *App) Initialize(user, password, dbname string) {
 	connectionString := fmt.Sprintf("%s:%s@/%s", user, password, dbname)
 
